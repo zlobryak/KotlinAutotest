@@ -10,7 +10,7 @@ class MoneyTransferTest {
     private val printStream = PrintStream(outputStream)
     private val originalOut = System.out
 
-
+//Сломаем тест для проверки CI на GgitHub
     @Test
     fun moneyTransfer_Above_Day_Limits() {
         System.setOut(printStream)
@@ -25,7 +25,7 @@ class MoneyTransferTest {
         moneyTransfer(amount, cardType, amountDayOut, amountDayIn, amountMonthOut, amountMonthIn, isVkPay)
 
         val actualOutput = outputStream.toString().trim()
-        assertEquals("Превышен лимит переводов", actualOutput)
+        assertEquals("Превышен лимит переводов добавим пару символов, чтодбы сломать тест", actualOutput)
         System.setOut(originalOut)
     }
 
